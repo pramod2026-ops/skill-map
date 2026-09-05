@@ -23,3 +23,12 @@ skills.forEach(function (skill) {
 
   skillList.appendChild(li);
 });
+
+const progressText = document.querySelector("#progress-text");
+
+const completedSkills = skills.filter(function (skill) {
+  return skill.status === "done";
+});
+
+const progress = (completedSkills.length / skills.length) * 100;
+progressText.textContent = "Progress:  " + progress + "%";
