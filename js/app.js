@@ -32,3 +32,6 @@ const completedSkills = skills.filter(function (skill) {
 
 const progress = (completedSkills.length / skills.length) * 100;
 progressText.textContent = "Progress:  " + progress + "%";
+
+const progressFill = document.querySelector("#progress-fill");
+progressFill.style.width = progress + "%";
